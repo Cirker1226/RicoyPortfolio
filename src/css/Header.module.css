@@ -10,6 +10,8 @@
   align-items: center;
   gap: 1.5rem;
   padding: 0 48px;
+  background: rgba(11, 11, 15, .88);
+  backdrop-filter: blur(10px);
   font-family: 'Titillium Web', system-ui, sans-serif;
   border-bottom: 1px solid #2c2c3a;
 }
@@ -82,19 +84,3 @@
 
 .menu a:hover::after,
 .menu a.ativo::after { transform: scaleX(1); }
-
-/* ---------- Responsivo ---------- */
-@media (max-width: 1100px) {
-  .topo { padding: 0 24px; }
-  .menu { gap: 1.25rem; }
-  .menu a { font-size: .78rem; }
-}
-
-@media (max-width: 900px) {
-  .topo { padding: 0 16px; gap: .75rem; }
-  .menu { display: none; }
-}
-
-@media (max-width: 480px) {
-  .logoTexto { font-size: 1rem; }
-}
