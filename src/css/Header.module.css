@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,600;0,900;1,900&display=swap');
+
+/* ---------- Barra do topo ---------- */
+.topo {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 48px;
+  font-family: 'Titillium Web', system-ui, sans-serif;
+  border-bottom: 1px solid #2c2c3a;
+}
+
+/* ---------- Logo ---------- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  white-space: nowrap;
+}
+
+.logoIcone {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #e10600;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform .25s;
+}
+
+.logo:hover .logoIcone { 
+  transform: scale(1.08);
+}
+
+.logoTexto {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #f2f2f5;
+}
+
+.logoTexto b { 
+  color: #e10600; 
+}
+
+/* ---------- Menu ---------- */
+.menu {
+  display: flex;
+  gap: 1.85rem;
+  margin-left: auto;
+}
+
+.menu a {
+  position: relative;
+  padding: .4rem 0;
+  font-weight: 600;
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #9a9aab;
+  transition: color .2s;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;        
+  height: 2px;
+  background: #e10600;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s;
+}
+
+.menu a:hover,
+.menu a.ativo { color: #f2f2f5; }
+
+.menu a:hover::after,
+.menu a.ativo::after { transform: scaleX(1); }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1100px) {
+  .topo { padding: 0 24px; }
+  .menu { gap: 1.25rem; }
+  .menu a { font-size: .78rem; }
+}
+
+@media (max-width: 900px) {
+  .topo { padding: 0 16px; gap: .75rem; }
+  .menu { display: none; }
+}
+
+@media (max-width: 480px) {
+  .logoTexto { font-size: 1rem; }
+}
