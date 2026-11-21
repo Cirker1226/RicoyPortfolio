@@ -95,3 +95,12 @@ a {
   .stats { gap: 1.5rem; }
   .stat strong { font-size: 2.2rem; }
 }
+
+/* RESPONSIVIDADE */
+@media (max-width: 960px) {
+  .favoritos { grid-template-columns: 1fr; }
+  .fav { min-height: 500px; }
+}
+@media (max-width: 480px) {
+  .secao { padding: 70px 0; }
+}

@@ -54,9 +54,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);   /* canto cortado */
 }
 
-/* "07" gigante no canto do card */
-.foto::before {
-  content: '07';
+.numeroPiloto {
   position: absolute;
   top: -1.5rem;
   right: .5rem;

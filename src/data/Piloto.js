@@ -1,5 +1,5 @@
 export const piloto = {
-  numero: '01',
+  secao: '01',
   titulo: 'Ficha do Piloto',
   subtitulo: 'Quem está atrás do volante (ou do teclado).',
 

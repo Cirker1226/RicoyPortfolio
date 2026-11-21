@@ -1,4 +1,3 @@
-// src/data/Trabalhos.js
 export const Trabalhos = [
     {
         sigla: 'WT',

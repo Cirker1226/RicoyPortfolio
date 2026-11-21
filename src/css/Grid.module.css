@@ -25,62 +25,6 @@
   user-select: none;
 }
 
-/* Linhas de vento passando */
-.velocidade {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.velocidade span {
-  position: absolute;
-  left: -30%;
-  width: 25%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #e10600);
-  opacity: .45;
-  animation: vento 2.4s linear infinite;
-}
-/* Animações geradas com apoio de I.A */
-
-.velocidade span:nth-child(1) {
-  top: 18%;
-}
-
-.velocidade span:nth-child(2) {
-  top: 32%;
-  width: 15%;
-  animation-delay: .8s;
-}
-
-.velocidade span:nth-child(3) {
-  top: 47%;
-  animation-delay: 1.5s;
-}
-
-.velocidade span:nth-child(4) {
-  top: 61%;
-  width: 35%;
-  animation-delay: .3s;
-}
-
-.velocidade span:nth-child(5) {
-  top: 76%;
-  width: 18%;
-  animation-delay: 1.9s;
-}
-
-.velocidade span:nth-child(6) {
-  top: 89%;
-  animation-delay: 1.1s;
-}
-
-@keyframes vento {
-  to {
-    left: 110%;
-  }
-}
-
 /* Texto e terminal ficam na frente do fundo */
 .conteudo,
 .lado {

@@ -1,4 +1,3 @@
-// src/data/Ensinos.js
 export const Ensinos = [
     {
         sigla: 'PUC',

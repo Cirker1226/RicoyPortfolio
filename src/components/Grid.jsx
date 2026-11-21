@@ -5,12 +5,6 @@ import { grid } from '../data/Grid'
 export default function Grid() {
     return (
         <section className={styles.hero} id="inicio">
-            
-            {/* linhas de vento */}
-            <div className={styles.velocidade} aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
-
             <div className={styles.numero} aria-hidden="true">{Informacoes.numero}</div>
 
             <div className={styles.conteudo}>

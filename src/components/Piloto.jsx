@@ -5,12 +5,12 @@ import { Informacoes } from '../data/Informacoes.js'
 export default function Piloto() {
   return (
     <section className={styles.secao} id="piloto">
-      <h2 className={styles.titulo}><span>{Informacoes.numero}</span> {piloto.titulo}</h2>
+      <h2 className={styles.titulo}><span>{piloto.secao}</span> {piloto.titulo}</h2>
       <p className={styles.subtitulo}>{piloto.subtitulo}</p>
 
-      <div className={styles.ficha}>
+      <div className={styles.ficha}>  
         <div className={styles.foto}>
-          <div className={styles.placeholder}>SUA FOTO<br />AQUI</div>
+          <span className={styles.numeroPiloto} aria-hidden="true">{Informacoes.numero}</span>
           <div className={styles.nome}>
             <small>{Informacoes.cidade} - {Informacoes.estado}</small>
             <strong>{Informacoes.nome.toUpperCase()} {Informacoes.apelido.toUpperCase()}</strong>
