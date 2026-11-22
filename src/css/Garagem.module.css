@@ -239,6 +239,10 @@
     gap: .4rem;
     margin-top: auto;
     /* empurra para o fim do card */
+    min-height: 58px;
+    /* sempre reserva espaço para 2 linhas de habilidades */
+    align-content: flex-start;
+    /* as linhas começam em cima, mesmo quando só tem 1 */
 }
 
 .chip {

@@ -30,6 +30,15 @@ export const garagem = {
     codigo: 'https://github.com/Cirker1226/CalculaDOR',
     },
     {
+    nome: 'Portfólio F1',
+    pneu: 'macio',
+    descricao: 'Portfólio com tema de Fórmula 1, em que projetos viram carros, tecnologias viram troféus e o curso vira uma temporada.',
+    techs: ['React', 'Vite', 'JavaScript', 'CSS Modules'],
+    imagem: 'garagem/portfolio.png',
+    codigo: 'https://github.com/Cirker1226/RicoyPortfolio',
+    demo: 'https://ricoy-portfolio.vercel.app',
+    },
+    {
     nome: 'Catalogo com API REST/JWT',
     pneu: 'duro',
     descricao: 'Aplicação web com login e logout, autenticação JWT via cookie HttpOnly, área restrita e API REST para cadastro, consulta, edição e exclusão de produtos.',
