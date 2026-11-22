@@ -10,7 +10,7 @@ export default function Piloto() {
 
       <div className={styles.ficha}>  
         <div className={styles.foto}>
-          <span className={styles.numeroPiloto} aria-hidden="true">{Informacoes.numero}</span>
+          <img className={styles.retrato} src="/image.png" alt="Foto de Matheus Ricoy" />
           <div className={styles.nome}>
             <small>{Informacoes.cidade} - {Informacoes.estado}</small>
             <strong>{Informacoes.nome.toUpperCase()} {Informacoes.apelido.toUpperCase()}</strong>
@@ -30,9 +30,8 @@ export default function Piloto() {
           <p className={styles.bio}>{piloto.bio}</p>
 
           <div className={styles.stats}>
-            <div className={styles.stat}><strong>{piloto.anosTecnologia}</strong><span>Anos na tecnologia</span></div>
-            <div className={styles.stat}><strong>{piloto.anosProgramando}</strong><span>Anos programando</span></div>
             <div className={styles.stat}><strong>{piloto.experiencias}</strong><span>Experiências</span></div>
+            <div className={styles.stat}><strong>{piloto.projetosFeitos}</strong><span>Projetos Desenvolvidos</span></div>
             <div className={styles.stat}><strong>{piloto.cafe}</strong><span>Litros de café consumidos</span></div>
           </div>
         </div>

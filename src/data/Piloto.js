@@ -6,7 +6,7 @@ export const piloto = {
   equipe: 'PUC Minas',
   categoria: 'Eng. de Software',
   periodo: '2º de 8',
-  tecnico: 'ADS · Proz',
+  tecnico: 'ADS · Proz Educação',
   base: 'Belo Horizonte, MG',
   status: '● Extensionista na WebTech',
 
@@ -16,8 +16,7 @@ export const piloto = {
   Hoje curso Engenharia de Software na PUC Minas e o Técnico em Análise e Desenvolvimento de Sistemas na Proz.
   Meu foco é seguir evoluindo para, em breve, atuar profissionalmente na área.`,
 
-  anosTecnologia: 8,
-  anosProgramando: 3,
   experiencias: 2,
+  projetosFeitos: 5,
   cafe: 120,
 }
