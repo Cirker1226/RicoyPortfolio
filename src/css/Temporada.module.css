@@ -1,0 +1,208 @@
+/* Seção */
+.secao {
+  padding: 80px 0 100px; /* em cima 80px, embaixo 100px */
+  font-family: 'Titillium Web', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #f2f2f5;
+  border-top: 1px solid #2c2c3a;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .5rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.titulo span {
+  padding: .15rem .5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .9rem;
+  font-style: normal;
+  background: #e10600;
+  color: #fff;
+}
+
+.subtitulo {
+  max-width: 65ch;
+  margin-bottom: 3rem;
+  color: #9a9aab;
+}
+
+/* link "Ver grade na PUC" */
+.linkGrade {
+  font-weight: 600;
+  white-space: nowrap;
+  color: #e10600;
+}
+
+.linkGrade:hover {
+  text-decoration: underline;
+}
+
+/* ===== Linha do tempo ===== */
+.calendario {
+  position: relative;
+  max-width: 820px;
+  list-style: none;
+}
+
+/* linha tracejada vertical = a pista */
+.calendario::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 21px; /* meio da bolinha (45px / 2 - 1.5px) */
+  width: 3px;
+  background: repeating-linear-gradient(180deg, #9a9aab 0 12px, transparent 12px 24px);
+  opacity: .5;
+}
+
+/* cada etapa: bolinha à esquerda, card à direita */
+.etapa {
+  position: relative;
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+/* bolinha com o número da rodada */
+.marco {
+  z-index: 1; /* fica por cima da linha tracejada */
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .8rem;
+  font-weight: 700;
+  background: #14141c;
+  border: 3px solid #2c2c3a;
+}
+
+/* semestre concluído: bolinha verde */
+.concluida .marco {
+  border-color: #00d26a;
+}
+
+/* semestre atual: bolinha vermelha */
+.atual .marco {
+  border-color: #e10600;
+}
+
+/* card do semestre */
+.card {
+  min-width: 0;
+  padding: 1.2rem 1.5rem;
+  background: #14141c;
+  border: 1px solid #2c2c3a;
+}
+
+/* semestre atual: card com borda vermelha */
+.atual .card {
+  border-color: #e10600;
+}
+
+/* semestres que ainda não começaram ficam um pouco apagados */
+.proxima .card {
+  opacity: .7;
+}
+
+.topo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+}
+
+.card p {
+  color: #9a9aab;
+}
+
+.rodada {
+  margin-bottom: .4rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .75rem;
+}
+
+/* etiqueta de status */
+.status {
+  padding: .15rem .5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+  white-space: nowrap;
+  border: 1px solid #2c2c3a;
+}
+
+.ok {
+  color: #00d26a;
+  border-color: #00d26a;
+}
+
+.agora {
+  color: #e10600;
+  border-color: #e10600;
+}
+
+.prox {
+  color: #9a9aab;
+}
+
+/* disciplinas */
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .6rem;
+}
+
+.etiqueta {
+  padding: .2rem .5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+  background: #20202c;
+  border: 1px solid #2c2c3a;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 900px) {
+  .secao {
+    padding-top: 56px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendario::before {
+    left: 16.5px;
+  }
+
+  .etapa {
+    grid-template-columns: 36px 1fr;
+    gap: 1rem;
+  }
+
+  .marco {
+    width: 36px;
+    height: 36px;
+    font-size: .7rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
