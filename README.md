@@ -45,7 +45,7 @@ Portfólio pessoal com tema de **Fórmula 1**, feito em **React + Vite**. Cada p
 - 💻 **Repositório:** [github.com/Cirker1226/RicoyPortfolio](https://github.com/Cirker1226/RicoyPortfolio)
 - 👤 **GitHub:** [github.com/Cirker1226](https://github.com/Cirker1226)
 - 💼 **LinkedIn:** [linkedin.com/in/matheushenrique1226](https://www.linkedin.com/in/matheushenrique1226/)
-- 🌐 **Site publicado:** _em breve_
+- 🌐 **Site publicado:** [ricoy-portfolio.vercel](https://ricoy-portfolio.vercel.app)
 
 ---
 
