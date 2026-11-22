@@ -230,3 +230,48 @@
 .status span:last-child {
   color: #e10600;
 }
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* tablet: texto em cima, terminal embaixo */
+@media (max-width: 960px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* celular: terminal mais compacto */
+@media (max-width: 600px) {
+  .tag {
+    font-size: .8rem;
+  }
+
+  .sub {
+    font-size: 1.05rem;
+  }
+
+  .corpo {
+    padding: 1rem;
+    gap: .7rem;
+    font-size: .68rem;
+  }
+
+  .aba {
+    padding: 0 .5rem;
+  }
+
+  .status {
+    font-size: .6rem;
+  }
+}
+
+/* celular pequeno: só a aba ativa aparece */
+@media (max-width: 420px) {
+  .aba:not(.abaAtiva) {
+    display: none;
+  }
+}

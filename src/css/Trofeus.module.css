@@ -291,3 +291,43 @@
     transform: translateX(4px);
     filter: brightness(1.15);
 }
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* menos espaço em cima e embaixo da seção */
+@media (max-width: 900px) {
+    .secao {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+/* celular: estante com 2 troféus por fileira */
+@media (max-width: 480px) {
+    .estante {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .75rem;
+    }
+
+    .trofeu {
+        padding: 1.2rem .6rem 1rem;
+    }
+
+    .trofeu svg {
+        width: 70px;
+        height: 88px;
+    }
+
+    .placa {
+        font-size: .85rem;
+    }
+}
+
+/* quem pede menos animação no sistema não vê os movimentos */
+@media (prefers-reduced-motion: reduce) {
+    .trofeu svg,
+    .trofeu::after,
+    .detalhe {
+        transition: none;
+    }
+}

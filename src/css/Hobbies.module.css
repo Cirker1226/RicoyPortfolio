@@ -190,3 +190,41 @@
   background: #e10600;
   cursor: default;
 }
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* tablet: um card embaixo do outro */
+@media (max-width: 960px) {
+  .favoritos {
+    grid-template-columns: 1fr;
+  }
+
+  .fav {
+    min-height: 500px;
+  }
+}
+
+/* menos espaço em cima e embaixo da seção */
+@media (max-width: 900px) {
+  .secao {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+/* celular */
+@media (max-width: 480px) {
+  .fav {
+    min-height: 440px;
+    padding: 1.5rem;
+  }
+
+  .fantasma {
+    font-size: 8rem;
+    bottom: -2rem;
+  }
+
+  .pontos {
+    right: 1.5rem;
+  }
+}

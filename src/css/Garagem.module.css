@@ -263,3 +263,20 @@
 .links:empty {
     display: none;
 }
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* menos espaço em cima e embaixo da seção */
+@media (max-width: 900px) {
+    .secao {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+/* quem pede menos animação no sistema não vê os movimentos */
+@media (prefers-reduced-motion: reduce) {
+    .projeto {
+        transition: none;
+    }
+}

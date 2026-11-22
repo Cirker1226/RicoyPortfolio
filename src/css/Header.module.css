@@ -88,3 +88,58 @@
 .menu a.ativo::after {
   transform: scaleX(1);
 }
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* notebook pequeno: menu mais apertado para caber */
+@media (max-width: 1100px) {
+  .topo {
+    gap: 1rem;
+  }
+
+  .menu {
+    gap: 1.25rem;
+  }
+
+  .menu a {
+    font-size: .78rem;
+  }
+}
+
+/* tablet e celular: logo em cima, menu embaixo rolando para o lado */
+@media (max-width: 900px) {
+  .topo {
+    height: auto;
+    flex-wrap: wrap;
+    row-gap: .2rem;
+    padding-top: .7rem;
+  }
+
+  .menu {
+    width: 100%;
+    margin-left: 0;
+    overflow-x: auto;      /* o menu rola para o lado com o dedo */
+    scrollbar-width: none; /* esconde a barra de rolagem */
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none;         /* esconde a barra no Safari */
+  }
+
+  .menu a {
+    flex-shrink: 0;        /* os links não espremem, ficam em fila */
+    padding: .5rem 0;
+  }
+}
+
+/* celular pequeno: logo menor */
+@media (max-width: 480px) {
+  .logoTexto {
+    font-size: 1rem;
+  }
+
+  .logoIcone {
+    width: 24px;
+    height: 24px;
+  }
+}
