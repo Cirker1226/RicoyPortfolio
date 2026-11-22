@@ -5,6 +5,8 @@ import Header from './components/Header.jsx'
 import Grid from './components/Grid.jsx'
 import Piloto from './components/Piloto.jsx'
 import Hobbies from './components/Hobbies.jsx'
+import Trofeus from './components/Trofeus.jsx'
+import Garagem from './components/Garagem.jsx'
 import './css/global.css'
 
 createRoot(document.getElementById('root')).render(
@@ -13,5 +15,7 @@ createRoot(document.getElementById('root')).render(
       <Grid />
       <Piloto />
       <Hobbies />
+      <Trofeus />
+      <Garagem />
   </>
 )

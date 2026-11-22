@@ -1,0 +1,265 @@
+/* Seção */
+.secao {
+    padding: 100px 0;
+    font-family: 'Titillium Web', system-ui, sans-serif;
+    line-height: 1.6;
+    color: #f2f2f5;
+    border-top: 1px solid #2c2c3a;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .5rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.titulo span {
+    padding: .15rem .5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .9rem;
+    font-style: normal;
+    background: #e10600;
+    color: #fff;
+}
+
+.subtitulo {
+    max-width: 65ch;
+    margin-bottom: 2rem;
+    color: #9a9aab;
+}
+
+/* Filtros (iguais aos dos Troféus) */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+
+.filtro {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    font: inherit;
+    font-weight: 600;
+    font-size: .8rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #f2f2f5;
+    background: #20202c;
+    border: 1px solid #2c2c3a;
+    cursor: pointer;
+    transition: border-color .2s;
+}
+
+.filtro:hover {
+    border-color: #9a9aab;
+}
+
+.filtro.ativo {
+    border-color: #e10600;
+    background: #0b0b0f;
+}
+
+/* bolinha = desenho do pneu visto de lado */
+.bolinha {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid;
+}
+
+.bolinha.macio {
+    border-color: #e10600;
+}
+
+.bolinha.medio {
+    border-color: #ffd400;
+}
+
+.bolinha.duro {
+    border-color: #e8e8e8;
+}
+
+/* Grid de projetos */
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 1.5rem;
+}
+
+.projeto {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    background: #14141c;
+    border: 1px solid #2c2c3a;
+    transition: transform .3s, border-color .3s;
+}
+
+.projeto:hover {
+    transform: translateY(-6px);
+}
+
+/* faixa colorida no topo do card */
+.projeto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 1; /* fica por cima da foto */
+}
+
+/* cor de cada pneu: faixa do topo, borda no hover e links no hover */
+.projeto.macio::before {
+    background: #e10600;
+}
+
+.projeto.medio::before {
+    background: #ffd400;
+}
+
+.projeto.duro::before {
+    background: #e8e8e8;
+}
+
+.projeto.macio:hover {
+    border-color: #e10600;
+}
+
+.projeto.medio:hover {
+    border-color: #ffd400;
+}
+
+.projeto.duro:hover {
+    border-color: #e8e8e8;
+}
+
+.projeto.macio .links a:hover {
+    color: #e10600;
+}
+
+.projeto.medio .links a:hover {
+    color: #ffd400;
+}
+
+.projeto.duro .links a:hover {
+    color: #e8e8e8;
+}
+
+/* Foto */
+/* caixa da foto: encosta nas bordas do card */
+.degrade {
+    position: relative; /* o degradê se posiciona em cima da foto */
+    /* margem negativa = "anula" o padding do card, a foto encosta nas bordas */
+    margin: -1.5rem -1.5rem 0;
+}
+
+/* degradê: a parte de baixo da foto some na cor do card */
+.degrade::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 45%, #14141c 100%);
+}
+
+.foto {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.semFoto {
+    display: grid;
+    place-items: center;
+    margin: -1.5rem -1.5rem 0; /* igual à .foto */
+    width: calc(100% + 3rem);
+    aspect-ratio: 16 / 9;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .75rem;
+    color: #9a9aab;
+    background:
+        repeating-linear-gradient(135deg, transparent 0 10px, rgba(255, 255, 255, .03) 10px 20px),
+        #20202c;
+}
+
+/* Posição e pneu */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.posicao {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+.composto {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem;
+    text-transform: uppercase;
+    color: #9a9aab;
+}
+
+/* Texto */
+.projeto h3 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.projeto p {
+    font-size: .95rem;
+    color: #9a9aab;
+}
+
+/* Tecnologias */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin-top: auto;
+    /* empurra para o fim do card */
+}
+
+.chip {
+    padding: .2rem .5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem;
+    background: #20202c;
+    border: 1px solid #2c2c3a;
+}
+
+/* Links */
+.links {
+    display: flex;
+    gap: 1.2rem;
+    font-weight: 700;
+    font-size: .85rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+/* projeto sem nenhum link: a linha some */
+.links:empty {
+    display: none;
+}
