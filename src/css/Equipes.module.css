@@ -1,0 +1,249 @@
+/* Seção */
+.secao {
+  padding: 100px 0;
+  font-family: 'Titillium Web', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #f2f2f5;
+  background: #14141c;
+  border-top: 1px solid #2c2c3a;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .5rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.titulo span {
+  padding: .15rem .5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .9rem;
+  font-style: normal;
+  background: #e10600;
+  color: #fff;
+}
+
+.subtitulo {
+  max-width: 65ch;
+  margin-bottom: 2rem;
+  color: #9a9aab;
+}
+
+/* Filtros (iguais aos da Garagem) */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 2rem;
+}
+
+.filtro {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  font-size: .8rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #f2f2f5;
+  background: #20202c;
+  border: 1px solid #2c2c3a;
+  cursor: pointer;
+  transition: border-color .2s;
+}
+.filtro:hover { border-color: #9a9aab; }
+.filtro.ativo { border-color: #e10600; background: #0b0b0f; }
+
+/* Grid de cards */
+.equipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
+  gap: 1.5rem;
+}
+
+/* ===== Card ===== */
+/* A cor da "pintura" de cada equipe fica no "color" do card.
+   As peças coloridas usam "currentColor", que quer dizer
+   "a cor do texto aqui", ou seja, a cor da equipe. */
+.equipe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 1.6rem 1.4rem;
+  overflow: hidden;
+  background: #0b0b0f;
+  border: 1px solid #2c2c3a;
+  transition: transform .3s, border-color .3s;
+}
+
+/* cor de cada equipe */
+.roxo    { color: #a64dff; }
+.laranja { color: #ff8000; }
+.azul    { color: #3b82f6; }
+.verde   { color: #00d26a; }
+
+/* faixa da "pintura" no topo do card */
+.equipe::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, currentColor 70%, transparent);
+}
+
+.equipe:hover { transform: translateY(-4px); border-color: currentColor; }
+
+/* Topo: sigla, nome e status */
+.topo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* sigla em paralelogramo, na cor da equipe */
+.sigla {
+  flex-shrink: 0;
+  min-width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  padding: 0 .4rem;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.05rem;
+  background: #14141c;
+  border: 2px solid currentColor;
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+
+.nome {
+  flex: 1;
+  min-width: 0;
+}
+.nome h3 {
+  font-size: 1.25rem;
+  line-height: 1.15;
+  color: #f2f2f5;
+}
+.nome small {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  color: #9a9aab;
+}
+
+/* etiqueta "Atual" / "Concluída" */
+.status {
+  align-self: flex-start;
+  padding: .15rem .5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+  white-space: nowrap;
+  border: 1px solid #2c2c3a;
+}
+.agora     { color: #e10600; border-color: #e10600; }
+.concluida { color: #00d26a; border-color: #00d26a; }
+
+/* o cargo fica em destaque, na cor da equipe (é o que o recrutador procura) */
+.cargo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.25;
+}
+
+.periodo {
+  margin: .2rem 0 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .75rem;
+  color: #9a9aab;
+}
+
+/* lista do que você fez */
+.feitos {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  margin-bottom: 1.2rem;
+  list-style: none;
+}
+.feitos li {
+  display: flex;
+  gap: .7rem;
+  font-size: .95rem;
+  color: #9a9aab;
+}
+/* tracinho inclinado na cor da equipe antes de cada linha */
+.feitos li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 12px;
+  height: 3px;
+  margin-top: .7em;
+  background: #9a9aab;
+  transform: skewX(-20deg);
+}
+.roxo .feitos li::before    { background: #a64dff; }
+.laranja .feitos li::before { background: #ff8000; }
+.azul .feitos li::before    { background: #3b82f6; }
+.verde .feitos li::before   { background: #00d26a; }
+
+/* habilidades */
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: auto; /* empurra para o fim do card */
+}
+
+.etiqueta {
+  padding: .2rem .5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+  color: #f2f2f5;
+  background: #20202c;
+  border: 1px solid #2c2c3a;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* menos espaço em cima e embaixo da seção */
+@media (max-width: 900px) {
+  .secao {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+/* celular */
+@media (max-width: 480px) {
+  .equipe {
+    padding: 1.3rem 1.2rem 1.2rem;
+  }
+
+  /* o status desce para baixo do nome */
+  .topo {
+    flex-wrap: wrap;
+  }
+
+  /* o nome ocupa o resto da linha da sigla */
+  .nome {
+    flex-basis: calc(100% - 52px - 1rem);
+  }
+}
+
+/* quem pede menos animação no sistema não vê os movimentos */
+@media (prefers-reduced-motion: reduce) {
+  .equipe {
+    transition: none;
+  }
+}
