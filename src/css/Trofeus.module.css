@@ -1,0 +1,293 @@
+/* Seção */
+.secao {
+    --ouro: #f5c542;
+    --prata: #c9ced6;
+    --bronze: #cd7f32;
+
+    padding: 100px 0;
+    font-family: 'Titillium Web', system-ui, sans-serif;
+    line-height: 1.6;
+    color: #f2f2f5;
+    background: #14141c;
+    border-top: 1px solid #2c2c3a;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .5rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.titulo span {
+    padding: .15rem .5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .9rem;
+    font-style: normal;
+    background: #e10600;
+    color: #fff;
+}
+
+.subtitulo {
+    max-width: 65ch;
+    margin-bottom: 2rem;
+    color: #9a9aab;
+}
+
+.ouroTxt {
+    color: var(--ouro);
+}
+
+.prataTxt {
+    color: var(--prata);
+}
+
+.bronzeTxt {
+    color: var(--bronze);
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+
+.filtro {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    font: inherit;
+    font-weight: 600;
+    font-size: .8rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #f2f2f5;
+    background: #20202c;
+    border: 1px solid #2c2c3a;
+    cursor: pointer;
+    transition: border-color .2s;
+}
+
+.filtro:hover {
+    border-color: #9a9aab;
+}
+
+.filtro.ativo {
+    border-color: #e10600;
+    background: #0b0b0f;
+}
+
+.filtro em {
+    font-style: normal;
+    font-family: 'JetBrains Mono', monospace;
+    color: #9a9aab;
+}
+
+/* bolinhas das medalhas nos filtros */
+.medalha {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.medalha.ouro {
+    background: var(--ouro);
+}
+
+.medalha.prata {
+    background: var(--prata);
+}
+
+.medalha.bronze {
+    background: var(--bronze);
+}
+
+.medalha.futuro {
+    background: transparent;
+    border: 2px dashed #5a5a6a;
+}
+
+/* Estante: cada troféu fica num "nicho" iluminado */
+.estante {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(170px, 100%), 1fr));
+    gap: 1.25rem;
+    scroll-margin-top: 90px;
+    /* não some atrás do Header ao voltar */
+}
+
+.trofeu {
+    --cor: var(--bronze);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem 1.2rem;
+    overflow: hidden;
+    font: inherit;
+    text-align: center;
+    color: #f2f2f5;
+    /* luz de vitrine vindo de cima */
+    background:                                                                                                 /* Background gerado com ajuda de IA */
+        radial-gradient(ellipse 70% 55% at 50% 0%, rgba(255, 255, 255, .09), transparent 70%),
+        linear-gradient(180deg, #191922, #0e0e14);
+    border: 1px solid #2c2c3a;
+    border-bottom: 6px solid #2c2c3a;
+    /* a "prateleira" */
+    box-shadow: inset 0 -12px 18px -12px rgba(0, 0, 0, .8);
+    cursor: pointer;
+}
+
+.trofeu.ouro {
+    --cor: var(--ouro);
+}
+
+.trofeu.prata {
+    --cor: var(--prata);
+}
+
+.trofeu.futuro {
+    --cor: #6a6a7a;
+    border-bottom-color: #22222c;
+}
+
+.trofeu:focus-visible {
+    outline: 2px solid var(--cor);
+    outline-offset: 2px;
+}
+
+.trofeu svg {
+    width: 84px;
+    height: 105px;
+    color: var(--cor);
+    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .6));
+    transition: transform .35s, filter .35s;
+}
+
+/* passar o mouse ou clicar = o piloto ergue o troféu */
+.trofeu:hover svg,
+.trofeu.erguido svg {
+    transform: translateY(-8px) rotate(-4deg) scale(1.06);
+    filter: drop-shadow(0 0 14px var(--cor));
+}
+
+.trofeu.erguido {
+    border-color: var(--cor);
+}
+
+/* brilho que atravessa o nicho no hover */
+.trofeu::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -60%;
+    width: 40%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .12), transparent);
+    transform: skewX(-20deg);
+    transition: left .6s;
+    pointer-events: none;
+}
+
+.trofeu:hover::after {
+    left: 130%;
+}
+
+/* logo "gravado" na taça */
+.gravado {
+    filter: brightness(0);
+    opacity: .55;
+}
+
+/* plaquinha com o nome */
+.placa {
+    margin-top: .9rem;
+    padding: .3rem .8rem;
+    font-weight: 700;
+    font-size: .95rem;
+    line-height: 1.2;
+    color: #111;
+    background: linear-gradient(180deg, #f3f3f6, #a9a9b5);
+    border-radius: 2px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, .5);
+}
+
+.nivel {
+    margin-top: .6rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--cor);
+}
+
+/* detalhes aparecem ao clicar */
+.detalhe {
+    max-height: 0;
+    overflow: hidden;
+    font-size: .8rem;
+    color: #9a9aab;
+    transition: max-height .35s, margin .35s;
+}
+
+.trofeu.erguido .detalhe {
+    max-height: 6em;
+    margin-top: .5rem;
+}
+
+/* troféus futuros: mesma taça, só que apagada */
+.trofeu.futuro svg {
+    opacity: .35;
+    filter: grayscale(1);
+}
+
+.trofeu.futuro .placa {
+    opacity: .45;
+}
+
+.trofeu.futuro .nivel {
+    color: #9a9aab;
+    opacity: .7;
+}
+
+.trofeu.futuro:hover svg,
+.trofeu.futuro.erguido svg {
+    opacity: .6;
+    filter: grayscale(1) drop-shadow(0 0 10px rgba(255, 255, 255, .15));
+}
+
+/* Botão "Ver mais" (paralelogramo, igual aos do Grid) */
+.mais {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.verMais {
+    padding: .85rem 1.7rem;
+    font: inherit;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #f2f2f5;
+    background: #20202c;
+    border: 0;
+    cursor: pointer;
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+    transition: transform .2s, filter .2s;
+}
+
+.verMais:hover {
+    transform: translateX(4px);
+    filter: brightness(1.15);
+}
