@@ -113,15 +113,6 @@
   color: #d5d5de;
 }
 
-.fav {
-  margin: 0;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .75rem;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: #9a9aab;
-}
-
 /* Fotos */
 .galeria,
 .foto,
