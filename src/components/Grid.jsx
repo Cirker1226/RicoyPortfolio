@@ -33,14 +33,14 @@ export default function Grid() {
                         <pre className={styles.codigo}>
                             <span className={styles.com}>// piloto.js · temporada 2026</span>{'\n'}
                             <span className={styles.kw}>const </span><span className={styles.var}>piloto</span>{' = {\n'}
-                            {'  '}<span className={styles.prop}>nome</span>{': '}<span className={styles.str}>"{Informacoes.nome} {Informacoes.apelido}</span>{',\n'}
+                            {'  '}<span className={styles.prop}>nome</span>{': '}<span className={styles.str}>"{Informacoes.nome} {Informacoes.apelido}"</span>{',\n'}
                             {'  '}<span className={styles.prop}>numero</span>{': '}<span className={styles.num}>{Informacoes.numero}</span>{',\n'}
-                            {'  '}<span className={styles.prop}>equipe</span>{': '}<span className={styles.str}>{Informacoes.instituicao}</span>{',\n'}
-                            {'  '}<span className={styles.prop}>curso</span>{': '}<span className={styles.str}>{Informacoes.bacharelal}</span>{',\n'}
-                            {'  '}<span className={styles.prop}>role</span>{': '}<span className={styles.str}>{Informacoes.cargo}</span>{'\n'}
+                            {'  '}<span className={styles.prop}>equipe</span>{': '}<span className={styles.str}>"{Informacoes.instituicao}"</span>{',\n'}
+                            {'  '}<span className={styles.prop}>curso</span>{': '}<span className={styles.str}>"{Informacoes.bacharelal}"</span>{',\n'}
+                            {'  '}<span className={styles.prop}>role</span>{': '}<span className={styles.str}>"{Informacoes.cargo}"</span>{'\n'}
                             {'  '}<span className={styles.prop}>periodo</span>{': '}<span className={styles.num}>{Informacoes.periodo}</span>{',\n'}
-                            {'  '}<span className={styles.prop}>base</span>{': '}<span className={styles.str}>{Informacoes.cidade}</span>{',\n'}
-                            {'  '}<span className={styles.prop}>status</span>{': '}<span className={styles.str}>"em pista"</span>{',\n'}
+                            {'  '}<span className={styles.prop}>base</span>{': '}<span className={styles.str}>"{Informacoes.cidade}"</span>{',\n'}
+                            {'  '}<span className={styles.prop}>status</span>{': '}<span className={styles.str}>"{grid.status}"</span>{',\n'}
                             {'};\n\n'}
                             <span className={styles.fn}>largada</span>{'('}<span className={styles.var}>piloto</span>{');'}
                         </pre>

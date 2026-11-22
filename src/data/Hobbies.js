@@ -9,8 +9,7 @@ export const hobbies = {
     titulo: 'Jogar',
     descricao: `Videogame é onde eu desligo a cabeça e me divirto, seja numa
     partida rápida com os amigos ou numa campanha de várias horas.`,
-    fotos: ['/jogo-1.png', '/jogo-2.png', '/jogo-3.png'],
-    legendas: ['Minecraft', 'Fortnite', 'Ghost Recon'],
+    fotos: ['hobbies/jogo-1.png', 'hobbies/jogo-2.png', 'hobbies/jogo-3.png'],
   },
 
   corridas: {
@@ -18,8 +17,7 @@ export const hobbies = {
     titulo: 'Participar de corridas',
     descricao: `A adrenalina da largada, o desafio de bater o meu próprio tempo
     e a sensação de cruzar a linha de chegada.`,
-    fotos: ['/corrida-1.png', '/corrida-2.png', '/corrida-3.png'],
-    legendas: ['PMMG 2026', 'ROTAM 2026', 'ROCCA 2025'],
+    fotos: ['hobbies/corrida-1.png', 'hobbies/corrida-2.png', 'hobbies/corrida-3.png'],
   },
 
   carros: {
@@ -27,7 +25,6 @@ export const hobbies = {
     titulo: 'Carros',
     descricao: `Do ronco do motor à engenharia por trás de cada detalhe: carros
     são uma paixão antiga. Estes são alguns dos meus favoritos.`,
-    fotos: ['/carro-1.png', '/carro-2.png', '/carro-3.png'],
-    legendas: ['Ford Mustang GT', 'Mitsubishi Lancer', 'DeLorean DMC-12'],
+    fotos: ['hobbies/carro-1.png', 'hobbies/carro-2.png', 'hobbies/carro-3.png'],
   },
 }

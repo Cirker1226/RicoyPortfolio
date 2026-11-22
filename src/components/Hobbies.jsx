@@ -24,7 +24,6 @@ function CardHobby({ hobby }) {
       <div className={styles.galeria}>
         <figure className={styles.foto} key={atual}>
           <img src={hobby.fotos[atual]} alt="" />
-          <figcaption><b>0{atual + 1}</b>{hobby.legendas[atual]}</figcaption>
         </figure>
 
         <div className={styles.pontos}>

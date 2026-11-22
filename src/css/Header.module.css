@@ -35,7 +35,7 @@
   transition: transform .25s;
 }
 
-.logo:hover .logoIcone { 
+.logo:hover .logoIcone {
   transform: scale(1.08);
 }
 
@@ -46,8 +46,8 @@
   color: #f2f2f5;
 }
 
-.logoTexto b { 
-  color: #e10600; 
+.logoTexto b {
+  color: #e10600;
 }
 
 /* Menu */
@@ -71,7 +71,7 @@
 .menu a::after {
   content: '';
   position: absolute;
-  inset: auto 0 0;        
+  inset: auto 0 0;
   height: 2px;
   background: #e10600;
   transform: scaleX(0);
@@ -80,7 +80,11 @@
 }
 
 .menu a:hover,
-.menu a.ativo { color: #f2f2f5; }
+.menu a.ativo {
+  color: #f2f2f5;
+}
 
 .menu a:hover::after,
-.menu a.ativo::after { transform: scaleX(1); }
+.menu a.ativo::after {
+  transform: scaleX(1);
+}

@@ -104,3 +104,11 @@ a {
 @media (max-width: 480px) {
   .secao { padding: 70px 0; }
 }
+
+@media (max-width: 900px) {
+  .secao { padding: 70px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projeto { transition: none; }
+}
