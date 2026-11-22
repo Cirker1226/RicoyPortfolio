@@ -32,8 +32,7 @@ function CardHobby({ hobby }) {
           <button disabled={atual === 2} onClick={() => setAtual(2)}></button>
         </div>
       </div>
-
-      <p className={styles.setor}>Hobby {hobby.numero}</p>
+      
       <h3>{hobby.titulo}</h3>
       <p>{hobby.descricao}</p>
     </article>

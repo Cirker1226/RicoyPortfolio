@@ -9,6 +9,7 @@
   font-family: 'Titillium Web', system-ui, sans-serif;
   min-height: 100vh;
   color: #f2f2f5;
+  border-bottom: 1px solid #2c2c3a; /* linha que separa do Piloto, igual às outras seções */
 }
 
 .numero {

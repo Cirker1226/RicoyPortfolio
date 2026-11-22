@@ -1,6 +1,6 @@
 /* Seção */
 .secao {
-  padding: 100px 48px;
+  padding: 80px 48px 100px; /* em cima 80px, embaixo 100px */
   font-family: 'Titillium Web', system-ui, sans-serif;
   color: #f2f2f5;
 }
@@ -188,7 +188,7 @@
 /* menos espaço em cima e embaixo da seção */
 @media (max-width: 900px) {
   .secao {
-    padding-top: 70px;
+    padding-top: 56px;
     padding-bottom: 70px;
   }
 }
