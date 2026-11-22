@@ -1,0 +1,209 @@
+/* Seção */
+.secao {
+  padding: 80px 0 100px; /* em cima 80px, embaixo 100px */
+  font-family: 'Titillium Web', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #f2f2f5;
+  border-top: 1px solid #2c2c3a;
+}
+
+/* duas colunas: chamada à esquerda, canais à direita */
+.grade {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.titulo span {
+  padding: .15rem .5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .9rem;
+  font-style: normal;
+  background: #e10600;
+  color: #fff;
+}
+
+/* "BORA ACELERAR JUNTOS?" */
+.chamada {
+  margin: 1.2rem 0;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: .95;
+  text-transform: uppercase;
+}
+
+.chamada b {
+  color: #e10600;
+}
+
+.subtitulo {
+  max-width: 46ch;
+  margin-bottom: 2rem;
+  color: #9a9aab;
+}
+
+/* ===== Lista de canais ===== */
+.canais {
+  background: #14141c;
+  border: 1px solid #2c2c3a;
+}
+
+.canaisTopo {
+  display: flex;
+  justify-content: space-between;
+  padding: .8rem 1.25rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #9a9aab;
+  background: #0d0d12;
+  border-bottom: 1px solid #2c2c3a;
+}
+
+.verde {
+  color: #00d26a;
+}
+
+/* cada canal (serve para o botão e para o link) */
+.canal {
+  display: grid;
+  grid-template-columns: auto 44px 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.05rem 1.25rem;
+  font: inherit;
+  text-align: left;
+  color: #f2f2f5;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #2c2c3a;
+  border-left: 4px solid transparent;
+  cursor: pointer;
+  transition: background .2s, border-color .2s, padding .2s;
+}
+
+.canal:last-child {
+  border-bottom: 0;
+}
+
+/* hover: a linha "anda" para a direita e ganha a faixa vermelha */
+.canal:hover {
+  padding-left: 1.6rem;
+  background: #20202c;
+  border-left-color: #e10600;
+}
+
+/* "CH 01" */
+.numero {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+  color: #9a9aab;
+}
+
+.icone {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: #e10600;
+  background: #0b0b0f;
+  border: 1px solid #2c2c3a;
+}
+
+.icone svg {
+  width: 22px;
+  height: 22px;
+}
+
+.info {
+  min-width: 0;
+}
+
+.info strong {
+  display: block;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+/* texto embaixo do nome: se for grande demais, termina em "..." */
+.info small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: .8rem;
+  color: #9a9aab;
+}
+
+/* botãozinho da direita: "Abrir ›" / "Copiar" */
+.acao {
+  padding: .3rem .65rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #9a9aab;
+  border: 1px solid #2c2c3a;
+  transition: background .2s, color .2s, border-color .2s;
+}
+
+.canal:hover .acao {
+  color: #fff;
+  background: #e10600;
+  border-color: #e10600;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* tablet: chamada em cima, canais embaixo */
+@media (max-width: 960px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* menos espaço em cima e embaixo da seção */
+@media (max-width: 900px) {
+  .secao {
+    padding-top: 56px;
+    padding-bottom: 70px;
+  }
+}
+
+/* celular: some o "CH 01" e o canal fica mais compacto */
+@media (max-width: 480px) {
+  .numero {
+    display: none;
+  }
+
+  .canal {
+    grid-template-columns: 40px 1fr auto;
+    gap: .8rem;
+    padding: .9rem 1rem;
+  }
+
+  .canal:hover {
+    padding-left: 1.2rem;
+  }
+
+  .icone {
+    width: 40px;
+    height: 40px;
+  }
+}

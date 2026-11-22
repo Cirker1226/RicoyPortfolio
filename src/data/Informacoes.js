@@ -14,8 +14,4 @@ export const Informacoes = {
 
   tecnico: 'Proz Educação',
   curso: 'Técnico em Analise e Desenvolvimento de Sistemas',
-
-  email: 'matheus.castilhoricoyguerra@gmail.com',
-  github: 'https://github.com/Cirker1226',
-  linkedin: 'https://www.linkedin.com/in/matheushenrique1226/',
 }
